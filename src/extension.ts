@@ -15,10 +15,10 @@ function runCommand(command: string): Promise<string> {
 
 export function activate(context: vscode.ExtensionContext) {
   let disposable = vscode.commands.registerCommand(
-    "extension.gitRefactor",
+    "extension.gitBrancher",
     async () => {
       // Read configuration settings
-      const config = vscode.workspace.getConfiguration("gitRefactor");
+      const config = vscode.workspace.getConfiguration("gitBrancher");
       const mainBranch = config.get<string>("mainBranch") || "main";
       const remote = config.get<string>("remote") || "origin";
 

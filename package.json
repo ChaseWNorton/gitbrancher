@@ -2,7 +2,7 @@
   "name": "gitbrancher",
   "displayName": "GitBrancher",
   "description": "Automatically stashes selected changes, creates a new branch from main, and commits & pushes the stashed changes.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "engines": {
     "vscode": "^1.81.0"
   },
@@ -10,18 +10,26 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onCommand:extension.gitBrancher"
+  ],
   "main": "./out/extension.js",
   "contributes": {
+    "commands": [
+      {
+        "command": "extension.gitBrancher",
+        "title": "Push Selected Changes"
+      }
+    ],
     "configuration": {
       "title": "Git Refactor",
       "properties": {
-        "gitRefactor.mainBranch": {
+        "gitBrancher.mainBranch": {
           "type": "string",
           "default": "main",
           "description": "The name of your 'main' branch."
         },
-        "gitRefactor.remote": {
+        "gitBrancher.remote": {
           "type": "string",
           "default": "origin",
           "description": "The name of your remote."
