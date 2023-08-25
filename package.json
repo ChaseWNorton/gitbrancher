@@ -2,10 +2,11 @@
   "name": "gitbrancher",
   "displayName": "GitBrancher",
   "description": "Automatically stashes selected changes, creates a new branch from main, and commits & pushes the stashed changes.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "engines": {
     "vscode": "^1.81.0"
   },
+  "publisher": "ChaseWNorton",
   "categories": [
     "Other"
   ],
